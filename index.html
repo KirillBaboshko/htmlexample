@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8" /> 
+        <title>Title</title> 
+    </head> 
+    <style> 
+        p { 
+            background: yellow; 
+        } 
+        button{ 
+            width: 500px; 
+        } 
+    </style> 
+    <body> 
+        <p id="hello">Hello</p> 
+        <p id="samhello">sam hello</p> 
+        <button id="bt">Press me</button> 
+    </body> 
+    <script> 
+        var helloElement = document.getElementById("hello"), 
+            samHelloElement = document.getElementById("samhello"), 
+            button = document.getElementById("bt"); 
+         
+        button.addEventListener("click",function(){ 
+            let timeCell = helloElement.innerHTML; 
+            helloElement.innerHTML = samHelloElement.innerHTML; 
+            samHelloElement.innerHTML = timeCell; 
+        });    
+         
+    </script> 
+</html>
